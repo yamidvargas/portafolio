@@ -1,0 +1,391 @@
+/*CSS Reset / Normalize*/
+
+
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+
+
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root {
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+    --color-fondo: #F5F5F5;
+    --color-link: #000;
+    --color-titulos: #464646;
+    /* REVISAR COLOR */
+    --color-fondo-azul: #EAF2FD;
+    --color-cajas: #fbfbfb;
+    --azul-botones: #0A3871;
+    --color-botones: #0A3871;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--color-fondo);
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+}
+
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+Lo que es el BEM?
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+
+/* SECCION MENU */
+
+section.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-end;
+    height: 10vh;
+    margin: 20px 153px;
+}
+
+
+/* cabecera y espacio */
+
+header.menu_header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-titulos);
+}
+
+
+/* alineacion de imagen */
+
+.img {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+}
+
+
+/* alineacion titulo */
+
+section.menu h3.menu_title {
+    margin: 11% 10% 0 0;
+    text-align: center;
+    line-height: 20px;
+}
+
+
+/* items del menu */
+
+section.menu nav ul.menu_list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    width: 600px;
+}
+
+
+/* mouse over items menu */
+
+.item_nav:hover {
+    color: #2a7ae4;
+}
+
+
+/* permite tomar solo un elemento de las clases y subclases */
+
+section.menu nav ul.menu_list li:nth-child(6) {
+    color: black;
+    font-weight: 800;
+}
+
+
+/* sección title */
+
+section.title {
+    margin: 0 153px;
+    width: 80%;
+    color: var(--color-titulos);
+}
+
+
+/* alineacion titulo */
+
+section.title div.title_div {
+    justify-content: space-between;
+    align-content: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+    /* Cambia de posicion, para el otro lado */
+}
+
+
+/* titulo principal */
+
+section.title div.title_container h2 {
+    margin-top: 10%;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 61px;
+}
+
+
+/* imagen de perfil */
+
+section.title img.title_profile {
+    margin-top: 8%;
+    width: 30%;
+    height: 30%;
+}
+
+
+/* alineacion contenedor texto debajo titulo */
+
+section.title div.title_div div.title_container h3 {
+    font-size: 17px;
+    line-height: 23px;
+    width: 90%;
+    margin-bottom: 30px;
+    line-height: 35px;
+    text-align: justify;
+    margin: 5% 0;
+}
+
+
+/* container link redes sociales */
+
+section.title div.title_div div.title_container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    width: 500px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    margin: 0 10%;
+}
+
+
+/* cambio color cuando se posiciona el mouse */
+
+.item:hover {
+    color: #2a7ae4;
+}
+
+
+/* sección About */
+
+section.about {
+    width: 1050px;
+    padding: 22px 153px;
+    background-color: var(--color-fondo-azul);
+}
+
+
+/* container seccion about */
+
+section.about div.about_container {
+    width: 700px;
+    line-height: 35px;
+}
+
+
+/* titulo seccion about */
+
+section.about h3.about_title {
+    font-size: 32px;
+    color: var(--color-titulos);
+    margin: 5% 0;
+}
+
+
+/* estilo texto parrafo */
+
+section.about p.about_paragraph {
+    width: 1000px;
+    margin: 5% 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: justify;
+}
+
+
+/* alineacion de firma */
+
+section.about img.firma {
+    width: 30%;
+    margin: 0 500px;
+}
+
+
+/* SECCION SKILLS TAMAÑO */
+
+section.skills {
+    margin: 64px 100px;
+}
+
+
+/* titulo */
+
+section.skills h3.skills_title {
+    font-size: 32px;
+    text-align: center;
+    color: var(--color-titulos);
+    margin: 5%;
+}
+
+
+/* alineacion de iconos */
+
+section.skills div.skills_line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+/* cajas skills */
+
+section.skills div.skills_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+    background-color: var(--color-cajas);
+    margin: 22px 15px 22px 0;
+    width: 150px;
+    height: 160px;
+    border-color: var(--color-botones);
+    border-style: outset;
+    border-width: 2px;
+}
+
+
+/* efecto al posicionar cursor */
+
+section.skills div.skills_box:hover {
+    width: 180px;
+    height: 190px;
+    align-items: center;
+    cursor: pointer;
+}
+
+section.skills li.skills_img:hover {
+    margin: 0 0 20% 0;
+}
+
+
+/* listas de skills - propiedades de texto*/
+
+section.skills div.skills_box ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* HOBBIES */
+
+section.hobbies {
+    margin: 64px 100px;
+}
+
+
+/* titulo de la seccion */
+
+section.hobbies h3.hobbies_title {
+    font-size: 32px;
+    text-align: center;
+    color: var(--color-titulos);
+    margin: 5%;
+}
+
+
+/* alineacion de iconos */
+
+section.hobbies div.hobbies_line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+/* cajas hobbies */
+
+section.hobbies div.hobbies_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 36px;
+    background-color: var(--color-cajas);
+    margin: 22px 15px 22px 0;
+    width: 150px;
+    height: 160px;
+}
+
+
+/* listas de hobbies - propiedades de texto*/
+
+section.hobbies div.hobbies_box ul {
+    padding: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--color-titulos);
+    text-align: center;
+}
+
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+
+@media (min-width: 768px) {
+    /* Menú */
+    /*title*/
+    /*Skills*/
+    /*Hobbies*/
+    /*Formación Académica*/
+    /*Experiencia Profesional*/
+}
+
+
+/*Mobile*/
+
+@media (min-width: 425px) {
+    /*Menu*/
+    /*Titulo*/
+    /*Sección sobre mi*/
+    /*Skills*/
+    /*Hobbies*/
+    /*Formación Académica*/
+    /*Experiencia Profesional*/
+    /*Contacto*/
+    /*Footer*/
+}
